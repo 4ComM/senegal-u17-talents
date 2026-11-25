@@ -235,5 +235,5 @@ function vai(i){if(i<0||i>=telas.length)return;at=i;telas.forEach((t,k)=>t.class
 document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')vai(at+1);if(e.key==='ArrowLeft')vai(at-1)});
 function fit(){const mob=innerWidth<820||(innerHeight>innerWidth&&innerWidth<1000);document.body.classList.toggle('mob',mob);const p=document.getElementById('pcPalco');
  if(mob){p.style.transform='';p.style.width='';p.style.height='';return}const k=Math.min(innerWidth/1440,innerHeight/900);p.style.transform=`scale(${k})`;p.style.left='0';p.style.top='0';p.style.width=(innerWidth/k)+'px';p.style.height=(innerHeight/k)+'px'}
-addEventListener('resize',fit);monta();fit();
+addEventListener('resize',fit);monta();fit();vai(0);
 </script></body></html>
